@@ -4,10 +4,6 @@ from .locators import MainPageLocators
 
 
 class LoginPage(BasePage):
-    def go_to_login_page(self):
-        login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
-        login_link.click()
-
     def should_be_login_page(self):
         self.should_be_login_url()
         self.should_be_login_form()
